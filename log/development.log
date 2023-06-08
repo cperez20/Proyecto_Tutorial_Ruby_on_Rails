@@ -2829,3 +2829,503 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 15ms (Views: 13.3ms | Allocations: 6994)
 
 
+Started GET "/" for ::1 at 2023-06-08 00:25:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 334)
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 864)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 36708)
+Completed 200 OK in 54ms (Views: 49.7ms | ActiveRecord: 0.0ms | Allocations: 41153)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-08 00:31:18 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 725)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 4156)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 626)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 7545)
+Completed 200 OK in 23ms (Views: 12.5ms | ActiveRecord: 0.7ms | Allocations: 15657)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-08 00:31:58 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 543)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2236)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 623)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5619)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 7081)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-08 00:32:59 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4533)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4631)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 6068)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Log in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field form-group">
+    <% f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder: "Email" %>
+  </div>
+
+  <div class="field form-group">
+    <% f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password", class:"form-control", placeholder: "Password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field form-group">
+      <%= f.check_box :remember_me, class="form-check-input" %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Log in</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+4:      <div class="field form-group">
+5:        <% f.label :email %><br />
+6:        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder: "Email" %>
+7:      </div>
+8:    
+9:      <div class="field form-group">
+10:        <% f.label :password %><br />
+11:        <%= f.password_field :password, autocomplete: "current-password", class:"form-control", placeholder: "Password" %>
+12:      </div>
+13:    
+14:      <% if devise_mapping.rememberable? %>
+15:        <div class="field form-group">
+16:          <%= f.check_box :remember_me, class="form-check-input" %>
+17:          <%= f.label :remember_me %>
+18:        </div>
+19:      <% end %>
+20:    
+21:      <div class="actions">
+22:        <%= f.submit "Log in" %>
+23:      </div>
+24:    <% end %>
+25:    
+26:    <%= render "devise/shared/links" %>
+  
+app/views/devise/sessions/new.html.erb:16: syntax error, unexpected '='
+app/views/devise/sessions/new.html.erb:16: syntax error, unexpected '='
+app/views/devise/sessions/new.html.erb:16: syntax error, unexpected '='
+app/views/devise/sessions/new.html.erb:16: syntax error, unexpected '='
+app/views/devise/sessions/new.html.erb:16: syntax error, unexpected '='
+app/views/devise/sessions/new.html.erb:16: syntax error, unexpected '='
+Started GET "/users/sign_in" for ::1 at 2023-06-08 00:33:38 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 543)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2249)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 623)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5646)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 7110)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-08 00:35:42 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 543)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2267)
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 623)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 5650)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 7128)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-08 00:37:49 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 572)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2293)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 623)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 5675)
+Completed 200 OK in 16ms (Views: 14.3ms | Allocations: 7104)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-08 00:38:00 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 546)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2267)
+  Rendered home/_header.html.erb (Duration: 1.2ms | Allocations: 623)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5664)
+Completed 200 OK in 22ms (Views: 19.6ms | Allocations: 7088)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-06-08 00:38:16 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"cpereznov20@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "cpereznov20@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2023-06-08 04:38:16.811158"], ["updated_at", "2023-06-08 04:38:16.811430"], ["id", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 303 See Other in 253ms (ActiveRecord: 2.2ms | Allocations: 10923)
+
+
+Started GET "/" for ::1 at 2023-06-08 00:38:16 -0400
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 122)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 1278)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 4470)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.1ms | Allocations: 5193)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:39:30 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 217)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2742)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 282)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5489)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 7922)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:39:38 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2545)
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5939)
+Completed 200 OK in 20ms (Views: 14.3ms | ActiveRecord: 0.3ms | Allocations: 8478)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:43:05 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2653)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 6047)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 0.2ms | Allocations: 8567)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:47:47 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2676)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 6070)
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 8622)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:48:09 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2677)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 6086)
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.2ms | Allocations: 8609)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:48:32 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2677)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 6071)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.3ms | Allocations: 8600)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:49:20 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2685)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 6094)
+Completed 200 OK in 25ms (Views: 19.5ms | ActiveRecord: 0.2ms | Allocations: 8610)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:50:42 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2674)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 6068)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.2ms | Allocations: 8612)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:51:40 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2675)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 6069)
+Completed 200 OK in 18ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 8592)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:51:41 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1697)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 250)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4209)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.2ms | Allocations: 5979)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:51:57 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2678)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 6072)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 8407)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:52:16 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2679)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 6073)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 0.3ms | Allocations: 8599)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 00:59:14 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2692)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 6086)
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 1.1ms | Allocations: 8803)
+
+
+Started GET "/users/..." for ::1 at 2023-06-08 00:59:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/..."):
+  
+Started GET "/users/edit" for ::1 at 2023-06-08 01:00:23 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2986)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 6395)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 8884)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:01:16 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2685)
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 6079)
+Completed 200 OK in 19ms (Views: 13.6ms | ActiveRecord: 0.3ms | Allocations: 8605)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:01:44 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2685)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 625)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 6080)
+Completed 200 OK in 19ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 8627)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:01:55 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2684)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 6078)
+Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 0.3ms | Allocations: 8615)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:04:06 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2684)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 6078)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 8604)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:05:34 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2692)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 6101)
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 0.3ms | Allocations: 8619)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:06:04 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2687)
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 6081)
+Completed 200 OK in 20ms (Views: 15.0ms | ActiveRecord: 0.3ms | Allocations: 8605)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:06:05 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1697)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 250)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 4209)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 5973)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:06:09 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1697)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 250)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 4211)
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 5799)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:06:23 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2687)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 6094)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 8413)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:06:31 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2687)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 6082)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.2ms | Allocations: 8629)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:06:49 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2688)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 6082)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 8602)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:07:08 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 209)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2687)
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 6081)
+Completed 200 OK in 17ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 8593)
+
+
+Started GET "/users/edit" for ::1 at 2023-06-08 01:08:33 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 214)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2699)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 6108)
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 0.3ms | Allocations: 8644)
+
+
