@@ -5181,3 +5181,1394 @@ Processing by FriendsController#index as HTML
 Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 4662)
 
 
+Started GET "/" for ::1 at 2023-06-20 18:52:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 334)
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 864)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 36857)
+Completed 200 OK in 41ms (Views: 36.5ms | ActiveRecord: 0.0ms | Allocations: 41302)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 18:52:28 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.5ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:17
+  Rendered friends/index.html.erb within layouts/application (Duration: 9.1ms | Allocations: 7368)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 311)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 10419)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.9ms | Allocations: 12420)
+
+
+Started DELETE "/friends/7" for ::1 at 2023-06-20 18:52:52 -0400
+Processing by FriendsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:63:in `set_friend'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/friends_controller.rb:52:in `destroy'
+  [1m[36mFriend Destroy (0.7ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/friends_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/friends_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/friends
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms | Allocations: 4831)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 18:52:52 -0400
+Processing by FriendsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:17
+  Rendered friends/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 802)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 284)
+  Rendered layouts/_alerts.html.erb (Duration: 0.6ms | Allocations: 155)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4026)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 4395)
+
+
+Started DELETE "/friends/8" for ::1 at 2023-06-20 18:52:55 -0400
+Processing by FriendsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:63:in `set_friend'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/friends_controller.rb:52:in `destroy'
+  [1m[36mFriend Destroy (0.3ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/friends_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/friends_controller.rb:52:in `destroy'
+Redirected to http://localhost:3000/friends
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms | Allocations: 2386)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 18:52:55 -0400
+Processing by FriendsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:17
+  Rendered friends/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 581)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 263)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3363)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.1ms | Allocations: 3643)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-20 18:53:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 730)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4180)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 6915)
+Completed 200 OK in 20ms (Views: 12.2ms | ActiveRecord: 0.5ms | Allocations: 12652)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-06-20 18:53:38 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"cpereznov20@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "cpereznov20@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 276ms (ActiveRecord: 0.2ms | Allocations: 4547)
+
+
+Started GET "/" for ::1 at 2023-06-20 18:53:38 -0400
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 1206)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 3935)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms | Allocations: 4252)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 18:53:42 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:17
+  Rendered friends/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 581)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 1011)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 4028)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 4307)
+
+
+Started GET "/friends/new" for ::1 at 2023-06-20 18:53:43 -0400
+Processing by FriendsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/friends/_form.html.erb:41
+  Rendered friends/_form.html.erb (Duration: 6.8ms | Allocations: 3777)
+  Rendered friends/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 4127)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 253)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 6786)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 7184)
+
+
+Started POST "/friends" for ::1 at 2023-06-20 18:54:00 -0400
+Processing by FriendsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "friend"=>{"first_name"=>"Lionel", "last_name"=>"Messi", "email"=>"messi@gmail.com", "phone"=>"+59431278209", "twitter"=>"lmessi10", "user_id"=>"2"}, "commit"=>"Create Friend"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/friends_controller.rb:27:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:27:in `block in create'
+  [1m[36mFriend Create (0.5ms)[0m  [1m[32mINSERT INTO "friends" ("first_name", "last_name", "email", "phone", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Lionel"], ["last_name", "Messi"], ["email", "messi@gmail.com"], ["phone", "+59431278209"], ["twitter", "lmessi10"], ["created_at", "2023-06-20 22:54:00.618265"], ["updated_at", "2023-06-20 22:54:00.618265"], ["user_id", 2]]
+  ↳ app/controllers/friends_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/friends_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/friends/9
+Completed 302 Found in 27ms (ActiveRecord: 1.4ms | Allocations: 9601)
+
+
+Started GET "/friends/9" for ::1 at 2023-06-20 18:54:00 -0400
+Processing by FriendsController#show as TURBO_STREAM
+  Parameters: {"id"=>"9"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:63:in `set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 363)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 1.2ms | Allocations: 1032)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4075)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 4975)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 18:54:01 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:17
+  Rendered friends/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 768)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 1.2ms | Allocations: 1004)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4204)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 4481)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-06-20 18:54:04 -0400
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 10ms (ActiveRecord: 0.2ms | Allocations: 2530)
+
+
+Started GET "/" for ::1 at 2023-06-20 18:54:04 -0400
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 289)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2999)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 3308)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 18:54:05 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.3ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:17
+  Rendered friends/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 831)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3514)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.3ms | Allocations: 3794)
+
+
+Started GET "/friends/9/edit" for ::1 at 2023-06-20 18:54:07 -0400
+Processing by FriendsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:63:in `set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/edit.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 15.3ms | Allocations: 4436)
+  Rendered friends/edit.html.erb within layouts/application (Duration: 16.9ms | Allocations: 4677)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4756)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.1ms | Allocations: 5587)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass
+
+@output_buffer.safe_append='    '.freeze;@output_buffer.append=( form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden );@output_buffer.safe_append='
+                                                                                                                                                           ^^^):
+    38: 
+    39:   <div class="mb-3">
+    40:     <% form.label :twitter, style: "display: block" %>
+    41:     <%= form.number_field :user_id, id: :friend_user_id, class:"form-control", value: current_user.id, type: :hidden %>
+    42:   </div>
+    43: 
+    44:   <div class="mb-3">
+  
+app/views/friends/_form.html.erb:41
+app/views/friends/_form.html.erb:1
+app/views/friends/edit.html.erb:3
+Started GET "/friends" for ::1 at 2023-06-20 18:54:09 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:17
+  Rendered friends/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 860)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3751)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.2ms | Allocations: 4069)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 18:56:13 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.0ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:17
+  Rendered friends/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 3658)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 328)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 18135)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 19633)
+
+
+Started GET "/friends/9" for ::1 at 2023-06-20 18:56:16 -0400
+Processing by FriendsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:64:in `set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 108)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 2783)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.4ms | Allocations: 4246)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 18:56:17 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:17
+  Rendered friends/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 759)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 263)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3436)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 3714)
+
+
+Started GET "/friends/9/edit" for ::1 at 2023-06-20 18:56:20 -0400
+Processing by FriendsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:64:in `set_friend'
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.2ms | Allocations: 1558)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-20 18:56:20 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 160)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1503)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 4240)
+Completed 200 OK in 10ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 7720)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 18:58:06 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1258)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 653)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4937)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 5941)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-06-20 19:14:08 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 214)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 554)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2720)
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5480)
+Completed 200 OK in 11ms (Views: 9.8ms | Allocations: 6841)
+
+
+Started POST "/users" for ::1 at 2023-06-20 19:14:27 -0400
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hola@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "hola@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "hola@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-06-20 23:14:27.699710"], ["updated_at", "2023-06-20 23:14:27.699710"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/friends/9/edit
+Completed 303 See Other in 263ms (ActiveRecord: 1.0ms | Allocations: 7295)
+
+
+Started GET "/friends/9/edit" for ::1 at 2023-06-20 19:14:27 -0400
+Processing by FriendsController#edit as TURBO_STREAM
+  Parameters: {"id"=>"9"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:64:in `set_friend'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering friends/edit.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 1.1ms | Allocations: 2493)
+  Rendered friends/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 2906)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 261)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 5670)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.1ms | Allocations: 8022)
+
+
+Started GET "/friends/new" for ::1 at 2023-06-20 19:14:33 -0400
+Processing by FriendsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering friends/new.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 3.0ms | Allocations: 1768)
+  Rendered friends/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2003)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 250)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4515)
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.2ms | Allocations: 6122)
+
+
+Started POST "/friends" for ::1 at 2023-06-20 19:15:07 -0400
+Processing by FriendsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "friend"=>{"first_name"=>"chao", "last_name"=>"ciao", "email"=>"chao@gmail.com", "phone"=>"+56912345678", "twitter"=>"holaa", "user_id"=>"4"}, "commit"=>"Create Friend"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/friends_controller.rb:28:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:28:in `block in create'
+  [1m[36mFriend Create (0.5ms)[0m  [1m[32mINSERT INTO "friends" ("first_name", "last_name", "email", "phone", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "chao"], ["last_name", "ciao"], ["email", "chao@gmail.com"], ["phone", "+56912345678"], ["twitter", "holaa"], ["created_at", "2023-06-20 23:15:07.529536"], ["updated_at", "2023-06-20 23:15:07.529536"], ["user_id", 4]]
+  ↳ app/controllers/friends_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/friends_controller.rb:28:in `block in create'
+Redirected to http://localhost:3000/friends/10
+Completed 302 Found in 14ms (ActiveRecord: 1.9ms | Allocations: 5938)
+
+
+Started GET "/friends/10" for ::1 at 2023-06-20 19:15:07 -0400
+Processing by FriendsController#show as TURBO_STREAM
+  Parameters: {"id"=>"10"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:64:in `set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 308)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 1005)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3870)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 4694)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 19:15:08 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.3ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 976)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 1004)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4425)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 4703)
+
+
+Started GET "/friends/9/edit" for ::1 at 2023-06-20 19:21:27 -0400
+  
+SyntaxError (/Users/Cristobal/Documents/Personal/Proyecto_Tutorial_Ruby_on_Rails/app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+...cate_user!, except: [index show]
+...                           ^~~~
+/Users/Cristobal/Documents/Personal/Proyecto_Tutorial_Ruby_on_Rails/app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+...rrect_user, only: [ edit update destroy]
+...                         ^~~~~~
+):
+  
+app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+Started GET "/friends" for ::1 at 2023-06-20 19:21:31 -0400
+  
+SyntaxError (/Users/Cristobal/Documents/Personal/Proyecto_Tutorial_Ruby_on_Rails/app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+...cate_user!, except: [index show]
+...                           ^~~~
+/Users/Cristobal/Documents/Personal/Proyecto_Tutorial_Ruby_on_Rails/app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+...rrect_user, only: [ edit update destroy]
+...                         ^~~~~~
+):
+  
+app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+Started GET "/friends/10" for ::1 at 2023-06-20 19:21:50 -0400
+  
+SyntaxError (/Users/Cristobal/Documents/Personal/Proyecto_Tutorial_Ruby_on_Rails/app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+...ate_user!, except: [ index show ]
+...                           ^~~~
+/Users/Cristobal/Documents/Personal/Proyecto_Tutorial_Ruby_on_Rails/app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+...rrect_user, only: [ edit update destroy ]
+...                         ^~~~~~
+):
+  
+app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:3: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/controllers/friends_controller.rb:4: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+Started GET "/friends" for ::1 at 2023-06-20 19:22:18 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.0ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 3345)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 3176)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 20728)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.2ms | Allocations: 22239)
+
+
+Started GET "/friends/9/edit" for ::1 at 2023-06-20 19:22:20 -0400
+Processing by FriendsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:70:in `set_friend'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.8ms | Allocations: 8752)
+
+
+  
+NoMethodError (undefined method `friends_find_by' for #<User id: 4, email: "hola@gmail.com", created_at: "2023-06-20 23:14:27.699710000 +0000", updated_at: "2023-06-20 23:14:27.699710000 +0000">
+Did you mean?  friend_ids):
+  
+app/controllers/friends_controller.rb:63:in `correct_user'
+Started GET "/friends" for ::1 at 2023-06-20 19:22:24 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 963)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 1004)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 4554)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 4866)
+
+
+Started GET "/friends/10/edit" for ::1 at 2023-06-20 19:22:26 -0400
+Processing by FriendsController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:70:in `set_friend'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.4ms | Allocations: 7067)
+
+
+  
+NoMethodError (undefined method `friends_find_by' for #<User id: 4, email: "hola@gmail.com", created_at: "2023-06-20 23:14:27.699710000 +0000", updated_at: "2023-06-20 23:14:27.699710000 +0000">
+Did you mean?  friend_ids):
+  
+app/controllers/friends_controller.rb:63:in `correct_user'
+Started GET "/friends" for ::1 at 2023-06-20 19:22:39 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 934)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 2.4ms | Allocations: 1004)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4379)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.3ms | Allocations: 4655)
+
+
+Started GET "/friends/9/edit" for ::1 at 2023-06-20 19:23:32 -0400
+Processing by FriendsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mFriend Load (0.0ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:70:in `set_friend'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFriend Load (0.0ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."user_id" = ? AND "friends"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:63:in `correct_user'
+Redirected to http://localhost:3000/friends
+Filter chain halted as :correct_user rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms | Allocations: 12886)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 19:23:32 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.0ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 1193)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 1104)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 16577)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 17191)
+
+
+Started DELETE "/friends/10" for ::1 at 2023-06-20 19:29:32 -0400
+Processing by FriendsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"10"}
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:72:in `set_friend'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mFriend Load (0.0ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."user_id" = ? AND "friends"."id" = ? LIMIT ?[0m  [["user_id", 4], ["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:65:in `correct_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/friends_controller.rb:56:in `destroy'
+  [1m[36mFriend Destroy (0.1ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/friends_controller.rb:56:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/friends_controller.rb:56:in `destroy'
+Redirected to http://localhost:3000/friends
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms | Allocations: 12312)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 19:29:32 -0400
+Processing by FriendsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1016)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 1104)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 32.4ms | Allocations: 16426)
+Completed 200 OK in 33ms (Views: 32.7ms | ActiveRecord: 0.1ms | Allocations: 17033)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-06-20 19:29:35 -0400
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 6ms (ActiveRecord: 0.2ms | Allocations: 2500)
+
+
+Started GET "/" for ::1 at 2023-06-20 19:29:35 -0400
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 125)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 363)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3296)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 4102)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-06-20 19:29:36 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1485)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4232)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 5375)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-20 19:29:37 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 160)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1851)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 4585)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 5760)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-06-20 19:29:41 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"cpereznov20@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "cpereznov20@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 256ms (ActiveRecord: 0.3ms | Allocations: 2708)
+
+
+Started GET "/" for ::1 at 2023-06-20 19:29:41 -0400
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 1029)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 3553)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 3821)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 19:29:44 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 773)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 1004)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 4209)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 4487)
+
+
+Started DELETE "/friends/9" for ::1 at 2023-06-20 19:29:46 -0400
+Processing by FriendsController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"9"}
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:72:in `set_friend'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."user_id" = ? AND "friends"."id" = ? LIMIT ?[0m  [["user_id", 2], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:65:in `correct_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/friends_controller.rb:56:in `destroy'
+  [1m[36mFriend Destroy (0.5ms)[0m  [1m[31mDELETE FROM "friends" WHERE "friends"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/friends_controller.rb:56:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/friends_controller.rb:56:in `destroy'
+Redirected to http://localhost:3000/friends
+Completed 302 Found in 12ms (ActiveRecord: 2.0ms | Allocations: 4243)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 19:29:46 -0400
+Processing by FriendsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.0ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:18
+  Rendered friends/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 581)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 1004)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4120)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 4400)
+
+
+Started GET "/friends/new" for ::1 at 2023-06-20 19:33:46 -0400
+Processing by FriendsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering friends/new.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 3.0ms | Allocations: 2480)
+  Rendered friends/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2819)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 615)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 6221)
+Completed 200 OK in 25ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 8705)
+
+
+Started POST "/friends" for ::1 at 2023-06-20 19:33:50 -0400
+Processing by FriendsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "friend"=>{"first_name"=>"Lionel", "last_name"=>"", "email"=>"", "phone"=>"", "twitter"=>"", "user_id"=>"2"}, "commit"=>"Create Friend"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.3ms | Allocations: 6876)
+
+
+  
+NoMethodError (undefined method `friend' for #<User id: 2, email: "cpereznov20@gmail.com", created_at: "2023-06-11 13:54:49.542207000 +0000", updated_at: "2023-06-11 13:54:49.542207000 +0000">
+Did you mean?  friends
+               friends=):
+  
+app/controllers/friends_controller.rb:28:in `create'
+Started GET "/friends/new" for ::1 at 2023-06-20 19:34:13 -0400
+Processing by FriendsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering friends/new.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 4.1ms | Allocations: 1994)
+  Rendered friends/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2118)
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 276)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 16329)
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 26398)
+
+
+Started POST "/friends" for ::1 at 2023-06-20 19:34:18 -0400
+Processing by FriendsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "friend"=>{"first_name"=>"Lionel", "last_name"=>"", "email"=>"", "phone"=>"", "twitter"=>"", "user_id"=>"2"}, "commit"=>"Create Friend"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/friends_controller.rb:31:in `block in create'
+  [1m[36mFriend Create (0.6ms)[0m  [1m[32mINSERT INTO "friends" ("first_name", "last_name", "email", "phone", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Lionel"], ["last_name", ""], ["email", ""], ["phone", ""], ["twitter", ""], ["created_at", "2023-06-20 23:34:18.144137"], ["updated_at", "2023-06-20 23:34:18.144137"], ["user_id", 2]]
+  ↳ app/controllers/friends_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/friends_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/friends/11
+Completed 302 Found in 11ms (ActiveRecord: 1.7ms | Allocations: 4059)
+
+
+Started GET "/friends/11" for ::1 at 2023-06-20 19:34:18 -0400
+Processing by FriendsController#show as TURBO_STREAM
+  Parameters: {"id"=>"11"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:72:in `set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 340)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 1005)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4082)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 5650)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-06-20 19:34:20 -0400
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 6ms (ActiveRecord: 0.2ms | Allocations: 2499)
+
+
+Started GET "/" for ::1 at 2023-06-20 19:34:20 -0400
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 122)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 363)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 3306)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 4112)
+
+
+Started GET "/users/sign_up" for ::1 at 2023-06-20 19:34:21 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 210)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 501)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2583)
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 5328)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 6726)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-06-20 19:34:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 160)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1852)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4585)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 5752)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-06-20 19:34:29 -0400
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"hola@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "hola@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 256ms (ActiveRecord: 0.4ms | Allocations: 2881)
+
+
+Started GET "/" for ::1 at 2023-06-20 19:34:29 -0400
+Processing by HomeController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 1029)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 3556)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 3824)
+
+
+Started GET "/friends/new" for ::1 at 2023-06-20 19:34:32 -0400
+Processing by FriendsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering friends/new.html.erb within layouts/application
+  Rendered friends/_form.html.erb (Duration: 2.8ms | Allocations: 1768)
+  Rendered friends/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1866)
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 250)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 4378)
+Completed 200 OK in 14ms (Views: 7.8ms | ActiveRecord: 0.2ms | Allocations: 6132)
+
+
+Started POST "/friends" for ::1 at 2023-06-20 19:34:38 -0400
+Processing by FriendsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "friend"=>{"first_name"=>"Messi", "last_name"=>"", "email"=>"", "phone"=>"", "twitter"=>"", "user_id"=>"4"}, "commit"=>"Create Friend"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/friends_controller.rb:31:in `block in create'
+  [1m[36mFriend Create (0.6ms)[0m  [1m[32mINSERT INTO "friends" ("first_name", "last_name", "email", "phone", "twitter", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Messi"], ["last_name", ""], ["email", ""], ["phone", ""], ["twitter", ""], ["created_at", "2023-06-20 23:34:38.290196"], ["updated_at", "2023-06-20 23:34:38.290196"], ["user_id", 4]]
+  ↳ app/controllers/friends_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/friends_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/friends/12
+Completed 302 Found in 11ms (ActiveRecord: 1.8ms | Allocations: 3626)
+
+
+Started GET "/friends/12" for ::1 at 2023-06-20 19:34:38 -0400
+Processing by FriendsController#show as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mFriend Load (0.1ms)[0m  [1m[34mSELECT "friends".* FROM "friends" WHERE "friends"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/friends_controller.rb:72:in `set_friend'
+  Rendering layout layouts/application.html.erb
+  Rendering friends/show.html.erb within layouts/application
+  Rendered friends/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 105)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:17
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 1004)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3610)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 4366)
+
+
+Started GET "/friends" for ::1 at 2023-06-20 19:34:41 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1290)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1370)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1714)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Friends List</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th>User Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div id="friends">
+      <% @friends.each do |friend| %>
+        <%= friend.user = current_user $>
+        <tr>
+          <td><%= friend.first_name %></td>
+          <td><%= friend.last_name %></td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone %></td>
+          <td><%= friend.twitter %></td>
+          <td><%= friend.user_id %></td>
+          <td><%= link_to 'Show', friend %></td>
+          <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+          <td><%= link_to 'Destroy', friend, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+<%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+):
+1:    <h1>Friends List</h1>
+2:    
+3:    <table class="table table-striped table-bordered table-hover">
+4:      <thead class="table-dark">
+5:        <tr>
+6:          <th>First Name</th>
+7:          <th>Last Name</th>
+8:          <th>Email</th>
+9:          <th>Phone</th>
+10:          <th>Twitter</th>
+11:          <th>User Id</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <div id="friends">
+18:          <% @friends.each do |friend| %>
+19:            <%= friend.user = current_user $>
+20:            <tr>
+21:              <td><%= friend.first_name %></td>
+22:              <td><%= friend.last_name %></td>
+23:              <td><%= friend.email %></td>
+24:              <td><%= friend.phone %></td>
+25:              <td><%= friend.twitter %></td>
+26:              <td><%= friend.user_id %></td>
+27:              <td><%= link_to 'Show', friend %></td>
+28:              <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+29:              <td><%= link_to 'Destroy', friend, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+30:            </tr>
+31:            <% end %>
+32:          <% end %>
+33:        </div>
+34:      </tbody>
+35:    </table>
+36:    
+37:    <%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+  
+app/views/friends/index.html.erb:20: syntax error, unexpected '<', expecting ')'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:20: syntax error, unexpected '<', expecting ')'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:20: syntax error, unexpected '<', expecting ')'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:20: syntax error, unexpected '<', expecting ')'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:20: syntax error, unexpected '<', expecting ')'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:20: syntax error, unexpected '<', expecting ')'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+Started GET "/friends" for ::1 at 2023-06-20 19:35:37 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1310)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1399)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2333)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Friends List</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th>User Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div id="friends">
+      <% @friends.each do |friend| %>
+        <%= friend.user == current_user $>
+        <tr>
+          <td><%= friend.first_name %></td>
+          <td><%= friend.last_name %></td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone %></td>
+          <td><%= friend.twitter %></td>
+          <td><%= friend.user_id %></td>
+          <td><%= link_to 'Show', friend %></td>
+          <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+          <td><%= link_to 'Destroy', friend, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+<%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+):
+1:    <h1>Friends List</h1>
+2:    
+3:    <table class="table table-striped table-bordered table-hover">
+4:      <thead class="table-dark">
+5:        <tr>
+6:          <th>First Name</th>
+7:          <th>Last Name</th>
+8:          <th>Email</th>
+9:          <th>Phone</th>
+10:          <th>Twitter</th>
+11:          <th>User Id</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <div id="friends">
+18:          <% @friends.each do |friend| %>
+19:            <%= friend.user == current_user $>
+20:            <tr>
+21:              <td><%= friend.first_name %></td>
+22:              <td><%= friend.last_name %></td>
+23:              <td><%= friend.email %></td>
+24:              <td><%= friend.phone %></td>
+25:              <td><%= friend.twitter %></td>
+26:              <td><%= friend.user_id %></td>
+27:              <td><%= link_to 'Show', friend %></td>
+28:              <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+29:              <td><%= link_to 'Destroy', friend, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+30:            </tr>
+31:            <% end %>
+32:          <% end %>
+33:        </div>
+34:      </tbody>
+35:    </table>
+36:    
+37:    <%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+  
+app/views/friends/index.html.erb:19: syntax error, unexpected global variable, expecting `do' or '{' or '('
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:19: syntax error, unexpected global variable, expecting `do' or '{' or '('
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:19: syntax error, unexpected global variable, expecting `do' or '{' or '('
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:19: syntax error, unexpected global variable, expecting `do' or '{' or '('
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:19: syntax error, unexpected global variable, expecting `do' or '{' or '('
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:19: syntax error, unexpected global variable, expecting `do' or '{' or '('
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+Started GET "/friends" for ::1 at 2023-06-20 19:35:54 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1324)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1413)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2368)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Friends List</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th>User Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div id="friends">
+      <% @friends.each do |friend| %>
+        <%= friend.user == current_user %>
+        <tr>
+          <td><%= friend.first_name %></td>
+          <td><%= friend.last_name %></td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone %></td>
+          <td><%= friend.twitter %></td>
+          <td><%= friend.user_id %></td>
+          <td><%= link_to 'Show', friend %></td>
+          <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+          <td><%= link_to 'Destroy', friend, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+<%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+):
+1:    <h1>Friends List</h1>
+2:    
+3:    <table class="table table-striped table-bordered table-hover">
+4:      <thead class="table-dark">
+5:        <tr>
+6:          <th>First Name</th>
+7:          <th>Last Name</th>
+8:          <th>Email</th>
+9:          <th>Phone</th>
+10:          <th>Twitter</th>
+11:          <th>User Id</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <div id="friends">
+18:          <% @friends.each do |friend| %>
+19:            <%= friend.user == current_user %>
+20:            <tr>
+21:              <td><%= friend.first_name %></td>
+22:              <td><%= friend.last_name %></td>
+23:              <td><%= friend.email %></td>
+24:              <td><%= friend.phone %></td>
+25:              <td><%= friend.twitter %></td>
+26:              <td><%= friend.user_id %></td>
+27:              <td><%= link_to 'Show', friend %></td>
+28:              <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+29:              <td><%= link_to 'Destroy', friend, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+30:            </tr>
+31:            <% end %>
+32:          <% end %>
+33:        </div>
+34:      </tbody>
+35:    </table>
+36:    
+37:    <%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+  
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+Started GET "/friends" for ::1 at 2023-06-20 19:37:03 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1327)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1416)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2371)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Friends List</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th>User Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div id="friends">
+      <% @friends.each do |friend| %>
+        <%= friend.user == current_user %>
+        <tr>
+          <td><%= friend.first_name %></td>
+          <td><%= friend.last_name %></td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone %></td>
+          <td><%= friend.twitter %></td>
+          <td><%= friend.user_id %></td>
+          <td><%= link_to 'Show', friend %></td>
+          <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+          <td><%= link_to 'Destroy', friend, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+        </tr>
+        <%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+        <% end %>
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+):
+1:    <h1>Friends List</h1>
+2:    
+3:    <table class="table table-striped table-bordered table-hover">
+4:      <thead class="table-dark">
+5:        <tr>
+6:          <th>First Name</th>
+7:          <th>Last Name</th>
+8:          <th>Email</th>
+9:          <th>Phone</th>
+10:          <th>Twitter</th>
+11:          <th>User Id</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <div id="friends">
+18:          <% @friends.each do |friend| %>
+19:            <%= friend.user == current_user %>
+20:            <tr>
+21:              <td><%= friend.first_name %></td>
+22:              <td><%= friend.last_name %></td>
+23:              <td><%= friend.email %></td>
+24:              <td><%= friend.phone %></td>
+25:              <td><%= friend.twitter %></td>
+26:              <td><%= friend.user_id %></td>
+27:              <td><%= link_to 'Show', friend %></td>
+28:              <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+29:              <td><%= link_to 'Destroy', friend, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+30:            </tr>
+31:            <%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+32:            <% end %>
+33:          <% end %>
+34:        </div>
+35:      </tbody>
+36:    </table>
+  
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting end-of-input
+Started GET "/friends" for ::1 at 2023-06-20 19:37:44 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1324)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1413)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2368)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Friends List</h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th>User Id</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <div id="friends">
+      <% @friends.each do |friend| %>
+        <%= if friend.user == current_user %>
+        <tr>
+          <td><%= friend.first_name %></td>
+          <td><%= friend.last_name %></td>
+          <td><%= friend.email %></td>
+          <td><%= friend.phone %></td>
+          <td><%= friend.twitter %></td>
+          <td><%= friend.user_id %></td>
+          <td><%= link_to 'Show', friend %></td>
+          <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+          <td><%= link_to 'Destroy', friend, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      <% end %>
+    </div>
+  </tbody>
+</table>
+
+<%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+):
+1:    <h1>Friends List</h1>
+2:    
+3:    <table class="table table-striped table-bordered table-hover">
+4:      <thead class="table-dark">
+5:        <tr>
+6:          <th>First Name</th>
+7:          <th>Last Name</th>
+8:          <th>Email</th>
+9:          <th>Phone</th>
+10:          <th>Twitter</th>
+11:          <th>User Id</th>
+12:          <th colspan="3"></th>
+13:        </tr>
+14:      </thead>
+15:    
+16:      <tbody>
+17:        <div id="friends">
+18:          <% @friends.each do |friend| %>
+19:            <%= if friend.user == current_user %>
+20:            <tr>
+21:              <td><%= friend.first_name %></td>
+22:              <td><%= friend.last_name %></td>
+23:              <td><%= friend.email %></td>
+24:              <td><%= friend.phone %></td>
+25:              <td><%= friend.twitter %></td>
+26:              <td><%= friend.user_id %></td>
+27:              <td><%= link_to 'Show', friend %></td>
+28:              <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
+29:              <td><%= link_to 'Destroy', friend, method: :delete, data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %></td>
+30:            </tr>
+31:            <% end %>
+32:          <% end %>
+33:        </div>
+34:      </tbody>
+35:    </table>
+36:    
+37:    <%= link_to "New friend", new_friend_path, class:"btn btn-secondary" %>
+  
+app/views/friends/index.html.erb:19: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:19: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:19: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:19: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:19: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:19: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/friends/index.html.erb:31: syntax error, unexpected `end', expecting ')'
+app/views/friends/index.html.erb:39: syntax error, unexpected `end', expecting ')'
+Started GET "/friends" for ::1 at 2023-06-20 19:38:33 -0400
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mFriend Load (0.3ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/friends/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/friends/index.html.erb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/friends/index.html.erb:19
+  Rendered friends/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 4634)
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 617)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 8058)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.5ms | Allocations: 9032)
+
+
